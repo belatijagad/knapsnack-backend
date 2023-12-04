@@ -86,6 +86,7 @@ def update_consumable(request, pk):
     return Response(serializer.data)
 
 @api_view(['DELETE'])
+@permission_classes([AllowAny])
 def delete_consumable(request, pk):
     data = request.data
     
